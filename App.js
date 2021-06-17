@@ -199,6 +199,7 @@ const styles = StyleSheet.create({
   },
   containerContent: {
     width:"100%",
+    height:"100%",
     padding: 15
   },
   containerRow: {
