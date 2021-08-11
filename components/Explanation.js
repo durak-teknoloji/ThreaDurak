@@ -12,14 +12,14 @@ const styles = StyleSheet.create({
     },
     textExplanationCaption:{
       fontWeight:"bold",
-      color: "#C3C4C3"
+      color: "#5E7082"
     },
     textExplanationText: {
-      color: "#C3C4C3"
+      color: "#5E7082"
     },
     textExplanationTextExample:{
       fontStyle:"italic",
-      color: "#C3C4C3"
+      color: "#5E7082"
     }
   })
 

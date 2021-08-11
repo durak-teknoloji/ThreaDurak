@@ -7,7 +7,7 @@ import SeparatorH from './SeparatorH';
 import SeparatorV from './SeparatorV';
 
 
-const ViewAllUser = () => {
+const ThreadTable = () => {
   // Row Selection background
   const [rowSelect, setRowSelect] = useState("");
   function handleSelection(params) {
@@ -18,7 +18,7 @@ const ViewAllUser = () => {
 
   let [pickerItems, setPickerItems] = useState([]);
   const pickerItemsSet = pickerItems.map(i => (
-    <Picker.Item key={i} label={i.toString()} value={i.toString()} />
+    <Picker.Item style={{color:'#7183E7'}} key={i} label={i.toString()} value={i.toString()} />
   ));
 
   // Picker Select değişince sqlden tablo çekme
@@ -96,22 +96,22 @@ const ViewAllUser = () => {
       <View>
         <View onTouchEnd={() => handleSelection(item.LOGICALREF)}
           key={item.NAME}
-          style={{ flexDirection: "row", backgroundColor: rowSelect == item.LOGICALREF ? "#757575" : "#282C34", width: "100%" }}>
+          style={{ flexDirection: "row", backgroundColor: rowSelect == item.LOGICALREF ? "#7C8DEB" : "#BEC6CD", width: "100%" }}>
           {/* <Text style={{flex: 1, color:'#F0F8FF'}}>{item.LOGICALREF}</Text> */}
           {/* <Text style={{flex: 2, color:'#F0F8FF', paddingRight:5}}>{item.NAME}</Text> */}
-          <Text style={{ flex: 3, color: '#F0F8FF', padding: 10, fontSize: 12, flexGrow: 5 }}>{item.TKT_NO}</Text>
+          <Text style={{ flex: 3, color: '#0F131B', padding: 10, fontSize: 12, flexGrow: 5 }}>{item.TKT_NO}</Text>
           <SeparatorH></SeparatorH>
-          <Text style={{ flex: 4, color: '#F0F8FF', padding: 10, fontSize: 12, flexGrow: 6 }}>{item.METRAJ}</Text>
+          <Text style={{ flex: 4, color: '#0F131B', padding: 10, fontSize: 12, flexGrow: 6 }}>{item.METRAJ}</Text>
           <SeparatorH></SeparatorH>
-          <Text style={{ flex: 5, color: '#F0F8FF', padding: 10, fontSize: 12 }}>{item.GRAMAJ}</Text>
+          <Text style={{ flex: 5, color: '#0F131B', padding: 10, fontSize: 12 }}>{item.GRAMAJ}</Text>
           <SeparatorH></SeparatorH>
-          <Text style={{ flex: 6, color: '#F0F8FF', padding: 10, fontSize: 12 }}>{item.NOM_TEX}</Text>
+          <Text style={{ flex: 6, color: '#0F131B', padding: 10, fontSize: 12 }}>{item.NOM_TEX}</Text>
           <SeparatorH></SeparatorH>
-          <Text style={{ flex: 7, color: '#F0F8FF', padding: 10, fontSize: 12 }}>{item.KONIK_TIPI}</Text>
+          <Text style={{ flex: 7, color: '#0F131B', padding: 10, fontSize: 12 }}>{item.KONIK_TIPI}</Text>
           <SeparatorH></SeparatorH>
-          <Text style={{ flex: 8, color: '#F0F8FF', padding: 10, fontSize: 12 }}>{item.KUTU_BOBIN_ADET}</Text>
+          <Text style={{ flex: 8, color: '#0F131B', padding: 10, fontSize: 12 }}>{item.KUTU_BOBIN_ADET}</Text>
           <SeparatorH></SeparatorH>
-          <Text style={{ flex: 9, color: '#F0F8FF', padding: 10, fontSize: 12 }}>{item.KOLI_BOBIN_ADET}</Text>
+          <Text style={{ flex: 9, color: '#0F131B', padding: 10, fontSize: 12 }}>{item.KOLI_BOBIN_ADET}</Text>
         </View>
         <SeparatorV></SeparatorV>
       </View>
@@ -121,34 +121,34 @@ const ViewAllUser = () => {
   return (
     <View style={{ flex: 1, width: "100%" }}>
       <View style={{ width: "100%", padding: 10, paddingBottom:0 }}>
-        <View style={{ backgroundColor: "white", width: "100%" }}>
+        <View style={{ backgroundColor: "#4A5BB9", width: "100%", marginBottom:10 }}>
           <Picker
-            style={{ color:"#757575", width: "100%" }}
+            style={{ color:"#FFFFFF", width: "100%" }}
             selectedValue={selectedThread}
             onValueChange={(itemValue, itemIndex) => {
               setSelectedThread(itemValue);
               getThreadsFromSQLite(itemValue);
             }
             }>
-            <Picker.Item label="Seçiniz" value="java" />
+            <Picker.Item style={{color:'#7183E7'}} label="Seçiniz" value="java" />
             {pickerItemsSet}
           </Picker>
         </View>
         <View
-          style={{ flexDirection: "row", backgroundColor: '#282C34', width: "100%" }}>
-          <Text style={{ flex: 3, color: '#F0F8FF', padding: 10, fontSize:12, fontWeight:"bold", paddingLeft:0, flexGrow:5 }}>Tkt No</Text>
+          style={{ flexDirection: "row", width: "100%" }}>
+          <Text style={{ flex: 3, color: '#0F131B', padding: 10, fontSize:12, fontWeight:"bold", paddingLeft:0, flexGrow:5 }}>Tkt No</Text>
           <SeparatorH></SeparatorH>
-          <Text style={{ flex: 4, color: '#F0F8FF', padding: 10, fontSize:12, fontWeight:"bold", flexGrow:6 }}>Metraj</Text>
+          <Text style={{ flex: 4, color: '#0F131B', padding: 10, fontSize:12, fontWeight:"bold", flexGrow:6 }}>Metraj</Text>
           <SeparatorH></SeparatorH>
-          <Text style={{ flex: 5, color: '#F0F8FF', padding: 10, fontSize:12, fontWeight:"bold" }}>Gramaj</Text>
+          <Text style={{ flex: 5, color: '#0F131B', padding: 10, fontSize:12, fontWeight:"bold" }}>Gramaj</Text>
           <SeparatorH></SeparatorH>
-          <Text style={{ flex: 6, color: '#F0F8FF', padding: 10, fontSize:12, fontWeight:"bold" }}>Nom. Tex</Text>
+          <Text style={{ flex: 6, color: '#0F131B', padding: 10, fontSize:12, fontWeight:"bold" }}>Nom. Tex</Text>
           <SeparatorH></SeparatorH>
-          <Text style={{ flex: 7, color: '#F0F8FF', padding: 10, fontSize:12, fontWeight:"bold" }}>Konik Tipi</Text>
+          <Text style={{ flex: 7, color: '#0F131B', padding: 10, fontSize:12, fontWeight:"bold" }}>Konik Tipi</Text>
           <SeparatorH></SeparatorH>
-          <Text style={{ flex: 8, color: '#F0F8FF', padding: 10, fontSize:12, fontWeight:"bold" }}>Kutu Bobin Adedi</Text>
+          <Text style={{ flex: 8, color: '#0F131B', padding: 10, fontSize:12, fontWeight:"bold" }}>Kutu Bobin Adedi</Text>
           <SeparatorH></SeparatorH>
-          <Text style={{ flex: 9, color: '#F0F8FF', padding: 10, fontSize:12, fontWeight:"bold", paddingRight:0 }}>Koli Bobin Adedi</Text>
+          <Text style={{ flex: 9, color: '#0F131B', padding: 10, fontSize:12, fontWeight:"bold", paddingRight:0 }}>Koli Bobin Adedi</Text>
         </View>
       </View>
           <SeparatorV></SeparatorV>
@@ -164,4 +164,4 @@ const ViewAllUser = () => {
   );
 };
 
-export default ViewAllUser;
+export default ThreadTable;

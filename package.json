@@ -1,6 +1,6 @@
 {
   "name": "awesomeproject",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "scripts": {
     "android": "react-native run-android",
@@ -11,8 +11,12 @@
   },
   "dependencies": {
     "@react-native-picker/picker": "^1.16.1",
+    "@react-navigation/bottom-tabs": "^6.0.2",
+    "@react-navigation/native": "^6.0.2",
     "react": "17.0.1",
     "react-native": "0.64.0",
+    "react-native-safe-area-context": "^3.3.0",
+    "react-native-screens": "^3.5.0",
     "react-native-sqlite-storage": "^5.0.0"
   },
   "devDependencies": {
