@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FlatList, Text, View, StyleSheet, Image, TouchableHighlight, TouchableOpacity, TextInput, ScrollView } from 'react-native';
+import { FlatList, Text, View, StyleSheet, Image, TouchableHighlight, TouchableOpacity, TextInput, Button, ScrollView } from 'react-native';
 import { enablePromise, openDatabase } from 'react-native-sqlite-storage';
 import { Picker } from '@react-native-picker/picker';
 import Dialog, { DialogContent } from 'react-native-popup-dialog';
@@ -48,9 +48,6 @@ const ThreadTable = () => {
     });
   }
 
-  // var db = openDatabase({ name: "db", 
-  // createFromLocation: "~ThreadDB.db", location: 'Library' }, 
-  // openCB, errorCB);
   function errorCB(err) {
     console.log("SQL Error: " + err);
   }
@@ -193,8 +190,6 @@ const ThreadTable = () => {
   }
 
 
-
-
   let listItemView = (item) => {
     return (
       <View>
@@ -266,11 +261,11 @@ const ThreadTable = () => {
         ></FlatList>
       </View>
 
-      <View style={{ right: 0, bottom: 0, position: 'absolute' }}>
-        <RoundButton onPress={() => {
-          setPopupVisible(true);
-        }}></RoundButton>
-      </View>
+
+      <RoundButton onPress={() => {
+        setPopupVisible(true);
+      }}></RoundButton>
+
 
       <Dialog
         visible={popupVisible}
@@ -278,9 +273,9 @@ const ThreadTable = () => {
           setPopupVisible(false);
         }}
       >
-        <DialogContent style={{ maxHeight: 350 }}>
-          <ScrollView style={{ height: 300, width: 300 }}>
-            <View style={{ margin: 10 }}>
+        <DialogContent style={{ maxHeight: 340 }}>
+          <ScrollView style={{ height: 300, width: 300, marginTop:20 }}>
+            <View style={{  }}>
               <Text style={{ fontSize: 15, fontWeight: 'bold' }}>Açıklama:</Text>
               <Text>{aciklama}</Text>
             </View>
@@ -288,7 +283,7 @@ const ThreadTable = () => {
               resizeMode="contain"
               style={{ width: 200, height: 200, alignSelf: 'center', margin: 10 }}
             ></Image>
-            <View style={{ margin: 10 }}>
+            <View style={{  }}>
               <Text style={{ fontSize: 15, fontWeight: 'bold' }}>Kullanım Alanları:</Text>
               <Text>{kullanimAlanlari}</Text>
             </View>
