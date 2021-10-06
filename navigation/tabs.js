@@ -11,18 +11,18 @@ const Tabs = () => {
     return(
         <Tab.Navigator options={{}} style={{}}>
             <Tab.Screen 
-                name="Liste" 
+                name="Ürünler" 
                 component={TableScreen}
                 options={{
                     tabBarIcon: ({focused}) => (
                         <View style={{flex:1, alignItems:'center', justifyContent:'center'}}>
-                            <Image source={require('../assets/Icons/icons8_view_details_48px.png')}
+                            <Image source={require('../assets/Icons/aicons8_clipboard_list_48px.png')}
                             resizeMode="contain"
-                            style={{width: 28, height:28, tintColor: focused ? '#4A5BB9' : '#BEC6CD',}}
+                            style={{width: 30, height:30, tintColor: focused ? '#4A5BB9' : '#BEC6CD',}}
                             ></Image>
                             {/* <Text style={{fontSize:12, color: focused ? '#4A5BB9' : '#BEC6CD'}}>TABLO</Text> */}
                         </View>
-                    ), tabBarLabelStyle: {fontSize:14}, tabBarLabel:"LİSTE"
+                    ), tabBarLabelStyle: {fontSize:14}, tabBarLabel:"Ürünler"
                 }}
             ></Tab.Screen>
             <Tab.Screen 
@@ -30,13 +30,13 @@ const Tabs = () => {
                 component={ConverterScreen}
                 options={{
                     tabBarIcon: ({focused}) => (
-                        <View style={{flex:1, flexDirection:'row', alignItems:'center', justifyContent:'center'}}>
-                            <Image source={require('../assets/Icons/icons8_calculator_48px.png')}
+                        <View style={{flex:1, alignItems:'center', justifyContent:'center'}}>
+                            <Image source={require('../assets/Icons/aicons8_calculator_48px.png')}
                             resizeMode="contain"
-                            style={{width: 28, height:28, tintColor: focused ? '#4A5BB9' : '#BEC6CD',}}
+                            style={{width: 30, height:30, tintColor: focused ? '#4A5BB9' : '#BEC6CD',}}
                             ></Image>
                         </View>
-                    ), tabBarLabelStyle: {fontSize:14}, tabBarLabel:"ÇEVRİM",
+                    ), tabBarLabelStyle: {fontSize:14}, tabBarLabel:"Çevrim",
                     //  tabBarShowLabel:false
                 }}
             ></Tab.Screen>
