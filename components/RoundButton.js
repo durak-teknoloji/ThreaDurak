@@ -1,7 +1,7 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image, TouchableHighlight, TouchableOpacity, TextInput, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableHighlight, Button, TouchableOpacity, TextInput, ScrollView } from 'react-native';
 
-const RoundButton = props => {
+const RoundButton = (props) => {
     return (
         <View style={styles.roundButtonContainer}>
             <TouchableOpacity
