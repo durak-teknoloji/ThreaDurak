@@ -199,17 +199,17 @@ const ThreadTable = () => {
           {/* <Text style={{flex: 1, color:'#F0F8FF'}}>{item.LOGICALREF}</Text> */}
           {/* <Text style={{flex: 2, color:'#F0F8FF', paddingRight:5}}>{item.NAME}</Text> */}
           <Text style={{ flex: 3, color: '#0F131B', padding: 8, fontSize: 12, flexGrow: 2 }}>{item.TKT_NO}</Text>
-          <SeparatorH></SeparatorH>
+          <SeparatorH Width={0.5}/>
           <Text style={{ flex: 4, color: '#0F131B', padding: 8, fontSize: 12, flexGrow: 3 }}>{item.METRAJ}</Text>
-          <SeparatorH></SeparatorH>
+          <SeparatorH Width={0.5}/>
           <Text style={{ flex: 5, color: '#0F131B', padding: 8, fontSize: 12, flexGrow: 3 }}>{item.GRAMAJ}</Text>
-          <SeparatorH></SeparatorH>
+          <SeparatorH Width={0.5}/>
           <Text style={{ flex: 6, color: '#0F131B', padding: 8, fontSize: 12, flexGrow: 2 }}>{item.NOM_TEX}</Text>
-          <SeparatorH></SeparatorH>
+          <SeparatorH Width={0.5}/>
           <Text style={{ flex: 7, color: '#0F131B', padding: 8, fontSize: 12, flexGrow: 2 }}>{item.KONIK_TIPI}</Text>
-          <View style={{ height: '100%', width: 1.5, backgroundColor: 'white' }}></View>
+          <SeparatorH Width={1.5}/>
           <Text style={{ flex: 8, color: '#0F131B', padding: 8, fontSize: 12, flexGrow: 2 }}>{item.KUTU_BOBIN_ADET}</Text>
-          <SeparatorH></SeparatorH>
+          <SeparatorH Width={0.5}/>
           <Text style={{ flex: 9, color: '#0F131B', padding: 8, fontSize: 12, flexGrow: 2 }}>{item.KOLI_BOBIN_ADET}</Text>
         </View>
         <SeparatorV></SeparatorV>
@@ -238,24 +238,25 @@ const ThreadTable = () => {
         <View
           style={{ flexDirection: "row", width: "100%" }}>
           <Text style={{ flex: 1, color: '#0F131B', padding: 8, fontSize: 12, fontWeight: "bold", flexGrow: 3, paddingLeft: 0, textAlign:"center" }}>Ürün Özellikleri</Text>
-          <View style={{ height: '100%', width: 1.5, backgroundColor: 'white' }}></View>
+          {/* <View style={{ height: '100%', width: 1.5, backgroundColor: 'white' }}></View> */}
+          <SeparatorH Width={1.5}/>
           <Text style={{ flex: 2, color: '#0F131B', padding: 8, fontSize: 12, fontWeight: "bold", flexGrow: 1, paddingRight: 0, textAlign:"center" }}>Bobin Adedi</Text>
         </View>
         <SeparatorV></SeparatorV>
         <View
           style={{ flexDirection: "row", width: "100%" }}>
           <Text style={{ flex: 3, color: '#0F131B', padding: 8, fontSize: 12, fontWeight: "bold", flexGrow: 2, }}>Tkt No</Text>
-          <SeparatorH></SeparatorH>
+          <SeparatorH Width={0.5}/>
           <Text style={{ flex: 4, color: '#0F131B', padding: 8, fontSize: 12, fontWeight: "bold", flexGrow: 3 }}>Metraj</Text>
-          <SeparatorH></SeparatorH>
+          <SeparatorH Width={0.5}/>
           <Text style={{ flex: 5, color: '#0F131B', padding: 8, fontSize: 12, fontWeight: "bold", flexGrow: 3 }}>Gramaj</Text>
-          <SeparatorH></SeparatorH>
+          <SeparatorH Width={0.5}/>
           <Text style={{ flex: 6, color: '#0F131B', padding: 8, fontSize: 12, fontWeight: "bold", flexGrow: 2 }}>Nom. Tex</Text>
-          <SeparatorH></SeparatorH>
+          <SeparatorH Width={0.5}/>
           <Text style={{ flex: 7, color: '#0F131B', padding: 8, fontSize: 12, fontWeight: "bold", flexGrow: 2 }}>Konik Tipi</Text>
-          <View style={{ height: '100%', width: 1.5, backgroundColor: 'white' }}></View>
+          <SeparatorH Width={1.5}/>
           <Text style={{ flex: 8, color: '#0F131B', padding: 8, fontSize: 12, fontWeight: "bold", flexGrow: 2 }}>Kutu</Text>
-          <SeparatorH></SeparatorH>
+          <SeparatorH Width={0.5}/>
           <Text style={{ flex: 9, color: '#0F131B', padding: 8, fontSize: 12, fontWeight: "bold", flexGrow: 2, }}>Koli</Text>
         </View>
       <SeparatorV></SeparatorV>
