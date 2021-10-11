@@ -1,3 +1,3 @@
 # ThreaDurak
 
-Mobile app that created with React-Native
+A mobile app that created with React-Native
