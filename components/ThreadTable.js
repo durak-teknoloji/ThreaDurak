@@ -101,9 +101,9 @@ const ThreadTable = () => {
         return require('../assets/Images/DURAFİX.jpg');
       case "DURAFLEX":
         return require('../assets/Images/DURAFLEX.jpg');
-      case "DURAK FİRE SAFE M-ARAMİD":
+      case "FİRE SAFE M-ARAMİD":
         return require('../assets/Images/DURAK_FİRE_SAFE_M-ARAMİD.jpg');
-      case "DURAK FİRE SAFE P-ARAMİD":
+      case "FİRE SAFE P-ARAMİD":
         return require('../assets/Images/DURAK_FİRE_SAFE_P-ARAMİD.jpg');
       case "DURAKRİL":
         return require('../assets/Images/DURAKRİL.jpg');
@@ -137,13 +137,13 @@ const ThreadTable = () => {
         return require('../assets/Images/POLYSOFT_RECYCLE.jpg');
       case "POLYSOFT":
         return require('../assets/Images/POLYSOFT.jpg');
-      case "POLYSTRONG(PC)":
+      case "POLYSTRONG (PC)":
         return require('../assets/Images/POLYSTRON(PC).jpg');
       case "POLYSTRONG (PP) RECYCLE":
         return require('../assets/Images/POLYSTRONG_(PP)_RECYCLE.jpg');
       case "POLYSTRONG PREMİUM":
         return require('../assets/Images/POLYSTRONG_PREMİUM.jpg');
-      case "POLYSTRONG(PP)":
+      case "POLYSTRONG (PP)":
         return require('../assets/Images/POLYSTRONG(PP).jpg');
       case "QTT":
         return require('../assets/Images/QTT.jpg');
@@ -207,7 +207,7 @@ const ThreadTable = () => {
           <Text style={{ flex: 6, color: '#0F131B', padding: 8, fontSize: 12, flexGrow: 2 }}>{item.NOM_TEX}</Text>
           <SeparatorH></SeparatorH>
           <Text style={{ flex: 7, color: '#0F131B', padding: 8, fontSize: 12, flexGrow: 2 }}>{item.KONIK_TIPI}</Text>
-          <SeparatorH></SeparatorH>
+          <View style={{ height: '100%', width: 1.5, backgroundColor: 'white' }}></View>
           <Text style={{ flex: 8, color: '#0F131B', padding: 8, fontSize: 12, flexGrow: 2 }}>{item.KUTU_BOBIN_ADET}</Text>
           <SeparatorH></SeparatorH>
           <Text style={{ flex: 9, color: '#0F131B', padding: 8, fontSize: 12, flexGrow: 2 }}>{item.KOLI_BOBIN_ADET}</Text>
@@ -220,7 +220,7 @@ const ThreadTable = () => {
   return (
     <View style={{ flex: 1, width: "100%" }}>
       <View style={{ width: "100%", padding: 8, paddingBottom: 0 }}>
-        <View style={{ backgroundColor: "#4A5BB9", width: "100%", marginBottom: 10 }}>
+        <View style={{ backgroundColor: "#4A5BB9", width: "100%", marginBottom: 8}}>
           <Picker
             style={{ color: "#FFFFFF", width: "100%" }}
             selectedValue={selectedThread}
@@ -234,9 +234,17 @@ const ThreadTable = () => {
             {pickerItemsSet}
           </Picker>
         </View>
+      </View>
         <View
           style={{ flexDirection: "row", width: "100%" }}>
-          <Text style={{ flex: 3, color: '#0F131B', padding: 8, fontSize: 12, fontWeight: "bold", flexGrow: 2, paddingLeft: 0 }}>Tkt No</Text>
+          <Text style={{ flex: 1, color: '#0F131B', padding: 8, fontSize: 12, fontWeight: "bold", flexGrow: 3, paddingLeft: 0, textAlign:"center" }}>Ürün Özellikleri</Text>
+          <View style={{ height: '100%', width: 1.5, backgroundColor: 'white' }}></View>
+          <Text style={{ flex: 2, color: '#0F131B', padding: 8, fontSize: 12, fontWeight: "bold", flexGrow: 1, paddingRight: 0, textAlign:"center" }}>Bobin Adedi</Text>
+        </View>
+        <SeparatorV></SeparatorV>
+        <View
+          style={{ flexDirection: "row", width: "100%" }}>
+          <Text style={{ flex: 3, color: '#0F131B', padding: 8, fontSize: 12, fontWeight: "bold", flexGrow: 2, }}>Tkt No</Text>
           <SeparatorH></SeparatorH>
           <Text style={{ flex: 4, color: '#0F131B', padding: 8, fontSize: 12, fontWeight: "bold", flexGrow: 3 }}>Metraj</Text>
           <SeparatorH></SeparatorH>
@@ -245,12 +253,11 @@ const ThreadTable = () => {
           <Text style={{ flex: 6, color: '#0F131B', padding: 8, fontSize: 12, fontWeight: "bold", flexGrow: 2 }}>Nom. Tex</Text>
           <SeparatorH></SeparatorH>
           <Text style={{ flex: 7, color: '#0F131B', padding: 8, fontSize: 12, fontWeight: "bold", flexGrow: 2 }}>Konik Tipi</Text>
+          <View style={{ height: '100%', width: 1.5, backgroundColor: 'white' }}></View>
+          <Text style={{ flex: 8, color: '#0F131B', padding: 8, fontSize: 12, fontWeight: "bold", flexGrow: 2 }}>Kutu</Text>
           <SeparatorH></SeparatorH>
-          <Text style={{ flex: 8, color: '#0F131B', padding: 8, fontSize: 12, fontWeight: "bold", flexGrow: 2 }}>Kutu Bob. Ad.</Text>
-          <SeparatorH></SeparatorH>
-          <Text style={{ flex: 9, color: '#0F131B', padding: 8, fontSize: 12, fontWeight: "bold", flexGrow: 2, paddingRight: 0 }}>Koli Bob. Ad.</Text>
+          <Text style={{ flex: 9, color: '#0F131B', padding: 8, fontSize: 12, fontWeight: "bold", flexGrow: 2, }}>Koli</Text>
         </View>
-      </View>
       <SeparatorV></SeparatorV>
       <View style={{ flex: 1 }}>
         <FlatList
